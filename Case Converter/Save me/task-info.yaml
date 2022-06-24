@@ -185,6 +185,90 @@ files:
     }, 30000)
 
   learner_created: false
+- name: src/style.css
+  visible: true
+  text: |-
+    body {
+        padding: 20px;
+    }
+
+    .title {
+        font-size: 28px;
+        margin: 10px;
+    }
+
+    textarea {
+        display: block;
+        width: 100%;
+        height: 50vh;
+        padding: 10px;
+    }
+
+    #buttons-container {
+        margin: 1vh;
+        display: flex;
+    }
+
+    button {
+        background-color: #fd9f7a;
+        margin-left: 10px;
+        border-radius: 6px;
+    }
+  learner_created: true
+- name: src/script.js
+  visible: true
+  text: |-
+    let upperCaseButton = document.getElementById("upper-case");
+    let lowerCaseButton = document.getElementById("lower-case");
+    let properCaseButton = document.getElementById("proper-case");
+    let sentenceCaseButton = document.getElementById("sentence-case");
+    let textarea = document.getElementById("textarea");
+
+    upperCaseButton.addEventListener("click", toUpperCase);
+    lowerCaseButton.addEventListener("click", toLowerCase)
+    properCaseButton.addEventListener("click", toProperCaseConverter);
+    sentenceCaseButton.addEventListener("click", toSentenceCaseConverter);
+
+    function toUpperCase() {
+        textarea.value = readTextarea().toString().toUpperCase();
+        textarea.style.textTransform = "uppercase";
+    }
+
+    function toLowerCase() {
+        textarea.value = readTextarea().toString().toLowerCase();
+        textarea.style.textTransform = "lowercase";
+    }
+
+    function toProperCaseConverter() {
+        textarea.style.textTransform = "none";
+        textarea.value = toProperCase(readTextarea());
+    }
+
+    function toSentenceCaseConverter() {
+        textarea.style.textTransform = "none";
+        textarea.value = toSentenceCase(readTextarea());
+    }
+
+    function toProperCase(sentences) {
+        return sentences.replace(/\w\S*/g, function (txt) {
+            return txt.charAt(0).toUpperCase() + txt.slice(1).toLowerCase();
+        });
+    }
+
+    function toSentenceCase(sentences) {
+        return sentences.toLowerCase().replace(/(^\s*\w|[.!?]\s*\w)/g, function (c) {
+            return c.toUpperCase()
+        });
+    }
+
+    function readTextarea() {
+        return textarea.value.toLowerCase();
+    }
+  learner_created: true
 feedback_link: https://hyperskill.org/learn/step/14001#comment
-status: Unchecked
+status: Solved
+feedback:
+  message: Well done! You've finished the project. Select a new project on <a href="https://hyperskill.org/projects">JetBrains
+    Academy</a> to continue learning.
+  time: Fri, 24 Jun 2022 16:16:03 UTC
 record: -1
