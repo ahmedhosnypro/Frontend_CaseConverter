@@ -3,23 +3,19 @@ hyperskill_project:
   ide_files: https://stepik.org/media/attachments/lesson/555152/additional_files.json
   is_template_based: false
   use_ide: true
-update_date: Thu, 01 Jan 1970 00:00:00 UTC
+update_date: Fri, 24 Jun 2022 14:33:00 UTC
 stages:
 - id: 962
   step: 13999
-  is_completed: false
+  is_completed: true
 - id: 963
   step: 14000
-  is_completed: false
+  is_completed: true
 - id: 964
   step: 14001
   is_completed: false
 topics:
   0:
-  - title: Introduction to UI/UX
-    theory_id: 14603
-  - title: Layout grids
-    theory_id: 14922
   - title: World Wide Web
     theory_id: 6633
   - title: HyperText Transfer Protocol
@@ -64,12 +60,12 @@ topics:
     theory_id: 8325
   - title: CSS Selectors
     theory_id: 7738
-  - title: DOM
-    theory_id: 8635
   - title: Introduction to Flexbox
     theory_id: 11760
   - title: Orientation and Display order
     theory_id: 11768
+  - title: DOM
+    theory_id: 8635
   - title: Web development
     theory_id: 13931
   1:

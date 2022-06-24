@@ -141,6 +141,41 @@ files:
         await new ConverterTest().runTests()
     }, 30000)
   learner_created: false
-feedback_link: https://hyperskill.org/projects/193/stages/963/implement#comment
-status: Unchecked
+- name: src/style.css
+  visible: true
+  text: |-
+    body {
+        padding: 20px;
+    }
+
+    .title {
+        font-size: 28px;
+        margin: 10px;
+    }
+
+    textarea {
+        display: block;
+        width: 100%;
+        height: 50vh;
+    }
+
+    #buttons-container {
+        margin: 1vh;
+        display: flex;
+    }
+
+    button {
+        background-color: #fd9f7a;
+        margin-left: 10px;
+        border-radius: 6px;
+    }
+  learner_created: true
+- name: src/script.js
+  visible: true
+  learner_created: true
+feedback_link: https://hyperskill.org/learn/step/14000#comment
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Fri, 24 Jun 2022 15:44:50 UTC
 record: -1
